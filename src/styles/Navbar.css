@@ -1,0 +1,27 @@
+ul li {
+    display: flex;
+    align-items: center;
+    font-size: 1vw;
+}
+
+ul i{
+    margin-left: 5px;
+    font-size: 1.5vw;
+}
+
+.nav-pt-2 i {
+    font-size: 1.5vw;
+}
+
+
+
+a {
+    display: flex;
+    align-items: center; 
+    font-size: 1vw;
+    font-weight: 500;
+}
+
+a:hover{
+    color: #3391ff;
+}

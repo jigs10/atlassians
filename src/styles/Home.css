@@ -1,0 +1,77 @@
+.home-container {
+  text-align: center;
+  padding: 0 12vw;
+}
+
+.hm-pt-1 {
+  padding-bottom: 10vh;
+}
+
+.hm-pt-1 h1 {
+  font-size: 4.40rem;
+  line-height: 5rem;
+  margin-bottom: 60px;
+}
+
+.hm-pt-1 h1 span {
+  animation: boldText 5s forwards; /* Apply the animation */
+}
+
+@keyframes boldText {
+  0% {
+    font-weight: normal;
+  }
+  100% {
+    font-weight: 900;
+  }
+}
+
+.get-started-btn {
+  background-color: #007bff;
+  color: white;
+  padding: 8px 30px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+
+.get-started-btn:hover {
+  background-color: #0056b3;
+}
+
+.video-carousel {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Space out the buttons and video */
+  margin: 40px auto 0; /* Center the carousel within the container */
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.carousel-btn {
+  color: black;
+  padding: 1px 8px;
+  border: black;
+  border: 2px solid black;
+  cursor: pointer;
+  font-size: 1.5rem;
+  font-weight: 900;
+}
+
+.carousel-video {
+  width: 82%; /* Adjust as necessary to fit your design */
+  height: auto;
+}
+
+.hm-pt-2 h1 {
+  text-align: start;
+  line-height: 3rem;
+  font-size: 2.5rem;
+  font-weight: 700;
+  font-family: var(--bxp-charlie-display-font-family);
+  position: relative;
+}
+
+
+
