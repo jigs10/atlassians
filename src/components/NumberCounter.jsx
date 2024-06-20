@@ -2,20 +2,19 @@ import React, { useEffect, useState } from 'react';
 
 const NumberCounter = ({ start, end, duration, className, symbol }) => {
   const [count, setCount] = useState(start);
-  const increment = end / (duration / 10); // Increment calculation
+  const increment = (end - start) / (duration / 10); // Increment calculation
 
   useEffect(() => {
-    let timer = setTimeout(() => {
-      if (count < end) {
-        setCount(count + increment);
-      } else {
-        setCount(end);
-      }
+    let timer = setInterval(() => {
+      setCount((prevCount) => {
+        const newCount = prevCount + increment;
+        return newCount >= end ? end : newCount;
+      });
     }, 10); // Update interval, can be adjusted for smoother animation
 
-    // Clean up timer on component unmount
-    return () => clearTimeout(timer);
-  }, [count, end, increment]);
+    // Clean up interval on component unmount
+    return () => clearInterval(timer);
+  }, [increment, end]);
 
   return (
     <div className={className}>
