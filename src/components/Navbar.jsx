@@ -102,11 +102,7 @@ const Navbar = (props) => {
           href="/enterprise"
         >
           Enterprise
-          <i
-            className={
-              hoveredItem === 5 ? "ri-arrow-up-s-line" : "ri-arrow-down-s-line"
-            }
-          ></i>
+          
         </a>
       </li>
     </ul>
