@@ -5,6 +5,7 @@ import CardVid from "../components/CardVid";
 import NumberCounter from "../components/NumberCounter";
 import NavCard from "../components/NavCard";
 import BtmNavCard from "../components/BtmNavCard";
+import Footer from "../components/Footer";
 
 const Home = () => {
   const [currentVideoIndex, setCurrentVideoIndex] = useState(0);
@@ -219,7 +220,7 @@ const Home = () => {
             </div>
           </div>
         </div>
-        <div className="hm-pt-7 flex flex-col gap-[20vh] my-[20vh] px-[4vw]">
+        <div className="hm-pt-7 flex flex-col gap-[20vh] mb-[5vh] mt-[20vh] px-[4vw]">
           <div className="flex flex-col items-center justify-center gap-5">
             <h1 className="text-[2.5rem] w-[40%] leading-tight">Help us shape <span className="font-bold">the future of teamwork</span></h1>
             <p className="w-[35%]">At Atlassian, we believe the impossible is possible - together. Join us today to help us inspire teamwork anywhere and everywhere, worldwide.</p>
@@ -229,10 +230,11 @@ const Home = () => {
             <h1 className="text-[2rem] font-bold">Unleash the power of 
             teamwork</h1>
             <p>Join millions teaming up on their best work</p>
-            <button className="bg-transparent px-4 py-2 border-2 border-gray-600 rounded-full font-medium">Get started for free</button>
+            <button className="bg-transparent px-8 py-2 border-2 border-gray-900 text-[1.3rem] rounded-full font-medium">Get started for free</button>
           </div>
         </div>
       </div>
+      <Footer />
     </>
   );
 };
