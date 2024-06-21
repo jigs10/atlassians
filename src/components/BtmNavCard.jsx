@@ -2,22 +2,23 @@ import React from "react";
 
 const BtmNavCard = () => {
   return (
-    <div>
-      <div className="flex items-center justify-between">
-        <div>
-          <img className="h-[300px] w-max"
+    <div className=" flex flex-col px-[9vw] justify-center">
+      <div className="flex gap-[5rem] pb-[5vh] justify-center">
+        <div className="flex items-center">
+          <img 
             src="https://wac-cdn.atlassian.com/misc-assets/webp-images/MercedesBenz-357676847.webp"
-            alt=""
+            alt="mercidez"
+            className="w-[150%]"
           />
         </div>
-        <div className="flex flex-col text-start gap-4">
+        <div className="flex flex-col text-start gap-4 justify-center text-white relative">
           <p>LARGE ENTERPRISE</p>
-          <p className="text-[1.8rem] w-[80%]">
+          <p className="text-[1.5rem]">
             “With Atlassian cloud, everything regarding server maintenance is
             done for us, and there’s less downtime and better performance.”
           </p>
           <div className="flex flex-col">
-            <p>MEHMET SARI</p>
+            <p className="font-bold">MEHMET SARI</p>
             <p>Modern Collaboration Platform Team, Mercedes Benz</p>
           </div>
 
@@ -25,11 +26,51 @@ const BtmNavCard = () => {
         </div>
       </div>
       <div>
-        <ul>
-          <li>
-            <button>
+        <ul className="flex gap-8 border-t border-gray-50">
+          <li className="active:border-t-2 active:border-gray-200">
+            <button className="mt-4">
               <img
                 src="https://wac-cdn.atlassian.com/misc-assets/webp-images/mercedes-benz-brand-logo1.svg"
+                alt=""
+              />
+            </button>
+          </li>
+          <li className="active:border-t-2 active:border-gray-200">
+            <button className="mt-4">
+              <img
+                src="https://wac-cdn.atlassian.com/misc-assets/webp-images/roblox-brand-logo.svg"
+                alt=""
+              />
+            </button>
+          </li>
+          <li className="active:border-t-2 active:border-gray-200">
+            <button className="mt-4">
+              <img
+                src="https://wac-cdn.atlassian.com/misc-assets/webp-images/royal-caribbean-brand-logo.svg"
+                alt=""
+              />
+            </button>
+          </li>
+          <li className="active:border-t-2 active:border-gray-200">
+            <button className="mt-4">
+              <img
+                src="https://wac-cdn.atlassian.com/misc-assets/webp-images/lumen-brand-logo.svg"
+                alt=""
+              />
+            </button>
+          </li>
+          <li className="active:border-t-2 active:border-gray-200">
+            <button className="mt-4">
+              <img
+                src="https://wac-cdn.atlassian.com/misc-assets/webp-images/doodle-brand-logo.svg"
+                alt=""
+              />
+            </button>
+          </li>
+          <li className="active:border-t-2 active:border-gray-200">
+            <button className="mt-4 ">
+              <img
+                src="https://wac-cdn.atlassian.com/misc-assets/webp-images/dropbox-brand-logo.svg"
                 alt=""
               />
             </button>

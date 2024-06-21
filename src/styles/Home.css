@@ -74,4 +74,7 @@
 }
 
 
-
+.pt-6-2{
+  padding-top: 10vh;
+  clip-path: polygon(2% 14%, 100% 0%, 100% 100%, 0% 100%);
+}

@@ -175,18 +175,37 @@ const Home = () => {
         </div>
 
         <div className="hm-pt-5 ">
-<h1 className="text-[2.5rem] font-bold">Empower everyone, on every team</h1>
-<NavCard/>
+          <h1 className="text-[2.5rem] font-bold">
+            Empower everyone, on every team
+          </h1>
+          <NavCard />
         </div>
-<div className="hm-pt-6">
-        <div className="flex flex-col items-center gap-3 my-[10vh]">
-          <h1 className="text-[2.5rem] font-bold">For teams of all sizes</h1>
-          <h5>Everyone from start-ups to large enterprises prefer Atlassian</h5>
-          <a href="" className="text-blue-600">Explore all customers stories <i class="ri-arrow-right-line"></i></a>
-        </div>
-        <div className="pt-6-2">
-          <BtmNavCard/>
-        </div>
+        <div className="hm-pt-6">
+          <div className="flex flex-col items-center gap-3 my-[10vh]">
+            <h1 className="text-[2.5rem] font-bold">For teams of all sizes</h1>
+            <h5>
+              Everyone from start-ups to large enterprises prefer Atlassian
+            </h5>
+            <a href="" className="text-blue-600">
+              Explore all customers stories <i class="ri-arrow-right-line"></i>
+            </a>
+          </div>
+          <div className="pt-6-2 bg-black py-[5vh] my-[6vh]">
+            <BtmNavCard />
+          </div>
+          <div className="mb-[8vh]">
+            <div className="flex justify-center  items-center gap-[10vw] py-10 bg-gray-200 rounded-xl">
+              <div className="flex flex-col gap-4">
+             <img src="https://wac-cdn.atlassian.com/misc-assets/webp-images/team-24_attribution-logo-above-left_full-color_RGB.svg" alt="" className="w-[60%]" />
+                <p className="text-start w-[95%]">That's a wrap! Catch up on all the highlights and more.</p>
+              </div>
+              <div className="flex flex-col gap-4 items-start">
+                <h4><i class="ri-calendar-line"></i> April 30 - May 2, 2024</h4>
+                <h4><i class="ri-map-pin-fill"></i> Las Vegas and digitally</h4>
+                <button className="bg-transparent px-4 py-2 border-2 border-gray-600 rounded-full font-medium">Watch on demand</button>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </>
