@@ -25,3 +25,22 @@ a {
 a:hover{
     color: #3391ff;
 }
+
+@media (max-width: 575.98px) { 
+    nav{
+        margin: 1vh 5vw !important;
+    }
+
+    nav ul{
+        display: none !important;
+    }
+
+    .nav-pt-2{
+        display: none !important;
+    }
+
+    .menu{
+        display: block !important;
+        color: white;
+    }
+ }

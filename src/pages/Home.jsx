@@ -55,7 +55,7 @@ const Home = () => {
     <>
       <Navbar />
       <div className="home-container px-[2vw]">
-        <div className="hm-pt-1 px-[10vw]">
+        <div className="hm-pt-1 px-[10vw] mb-[15vh]">
           <h1>
             The new Jira: <br />
             from <span>teams</span> to dreams
@@ -65,6 +65,8 @@ const Home = () => {
             <button className="carousel-btn rounded-full" onClick={prevVideo}>
               <i className="ri-arrow-left-s-line"></i>
             </button>
+            <div className="p-5 vid-div absolute">
+            </div>
             <video
               muted
               autoPlay
@@ -72,8 +74,10 @@ const Home = () => {
               className="carousel-video border-gray-200 rounded-lg border-2"
             >
               <source src={videos[currentVideoIndex]} type="video/mp4" />
+              
               Your browser does not support the video tag.
             </video>
+           
             <button className="carousel-btn rounded-full" onClick={nextVideo}>
               <i className="ri-arrow-right-s-line"></i>
             </button>
@@ -84,15 +88,16 @@ const Home = () => {
           <CardVid />
         </div>
 
-        <div className="hm-pt-3 my-[10vh] gap-[5vh] flex flex-col items-center justify-center px-[10vw]">
+        <div className="hm-pt-3 my-[10vh] gap-[5vh]  flex-col items-center justify-center px-[10vw]  hidden">
+          <div className="pt-3-div"></div>
           <div className="flex gap-2 justify-center items-center">
             <img
               src="https://wac-cdn.atlassian.com/misc-assets/webp-images/atlassian-intelligence.svg"
               alt=""
             />
-            <h4 className="font-semibold">Atlassian Intelligence</h4>
+            <h4 className="font-semibold text-white">Atlassian Intelligence</h4>
           </div>
-          <h1 className="text-[2.4rem] font-medium">
+          <h1 className="text-[2.4rem] font-medium text-white">
             Transform teamwork with human-AI collaboration
           </h1>
 
@@ -114,7 +119,7 @@ const Home = () => {
         </div>
 
         <div
-          className="hm-pt-4 flex justify-between my-[30vh] gap-9 py-[10vh] px-[8vw] bg-gray-200 "
+          className="hm-pt-4  justify-between my-[30vh] gap-9 py-[10vh] px-[8vw] bg-gray-200 hidden"
           ref={counterRef}
         >
           <div className="pt-4-1 flex text-start justify-between items-start gap-4 ">
@@ -175,13 +180,13 @@ const Home = () => {
           </div>
         </div>
 
-        <div className="hm-pt-5 px-[10vw]">
+        <div className="hm-pt-5  hidden px-[10vw]">
           <h1 className="text-[2.5rem] font-bold">
             Empower everyone, on every team
           </h1>
           <NavCard />
         </div>
-        <div className="hm-pt-6 px-[4vw]">
+        <div className="hm-pt-6  hidden px-[4vw]">
           <div className="flex flex-col items-center gap-3 my-[10vh]">
             <h1 className="text-[2.5rem] font-bold">For teams of all sizes</h1>
             <h5>
@@ -220,17 +225,17 @@ const Home = () => {
             </div>
           </div>
         </div>
-        <div className="hm-pt-7 flex flex-col gap-[20vh] mb-[5vh] mt-[20vh] px-[4vw]">
+        <div className="hm-pt-7  hidden flex-col gap-[20vh] mb-[5vh] mt-[20vh] px-[4vw]">
           <div className="flex flex-col items-center justify-center gap-5">
-            <h1 className="text-[2.5rem] w-[40%] leading-tight">Help us shape <span className="font-bold">the future of teamwork</span></h1>
-            <p className="w-[35%]">At Atlassian, we believe the impossible is possible - together. Join us today to help us inspire teamwork anywhere and everywhere, worldwide.</p>
-            <button className="bg-transparent px-4 py-2 border-2 border-gray-600 rounded-full font-medium">Share your story</button>
+            <h1 className="text-[3rem] w-[42%] leading-tight">Help us shape <span className="font-bold">the future of teamwork</span></h1>
+            <p className="w-[30%]">At Atlassian, we believe the impossible is possible - together. Join us today to help us inspire teamwork anywhere and everywhere, worldwide.</p>
+            <button className="bg-transparent px-6 py-2 text-[1.3rem] border-2 border-gray-600 rounded-full font-medium">Share your story</button>
           </div>
           <div className="pt-7-2 flex flex-col items-center justify-center gap-5 bg-blue-600 py-[15vh] text-white">
             <h1 className="text-[2rem] font-bold">Unleash the power of 
             teamwork</h1>
             <p>Join millions teaming up on their best work</p>
-            <button className="bg-transparent px-8 py-2 border-2 border-gray-900 text-[1.3rem] rounded-full font-medium">Get started for free</button>
+            <button className="bg-transparent px-8 py-2 border-2  text-[1.3rem] rounded-full font-medium">Get started for free</button>
           </div>
         </div>
       </div>

@@ -2,7 +2,7 @@ import React from "react";
 
 const footer = (props) => {
   return (
-    <div className="mb-[5vh] mx-[10vw]">
+    <div className="mb-[5vh] mx-[10vw] hidden">
       <div className="px-[2vw] mb-[5vh]  py-[5vh] bg-gray-200 rounded-2xl flex justify-between">
   
         <div className="flex flex-col gap-6">
@@ -53,30 +53,30 @@ const footer = (props) => {
         <div className="flex flex-col gap-6">
           <div>
           
-            <h4>PRODUCTS</h4>
+            <h4 className="font-bold text-sm">PRODUCTS</h4>
           </div>
           <div>
-            <ul className="flex flex-col gap-3">
+            <ul className="flex flex-col gap-3 ">
               <li>
-                <a href="#rovo">Rovo</a>
+                <a href="#rovo" className="font-normal">Rovo</a>
               </li>
               <li>
-                <a href="#jira">Jira</a>
+                <a href="#jira" className="font-normal">Jira</a>
               </li>
               <li>
-                <a href="#jira-align">Jira Align</a>
+                <a href="#jira-align" className="font-normal">Jira Align</a>
               </li>
               <li>
-                <a href="#jira-service-management">Jira Service Management</a>
+                <a href="#jira-service-management" className="font-normal">Jira Service Management</a>
               </li>
               <li>
-                <a href="#confluence">Confluence</a>
+                <a href="#confluence" className="font-normal">Confluence</a>
               </li>
               <li>
-                <a href="#trello">Trello</a>
+                <a href="#trello" className="font-normal">Trello</a>
               </li>
               <li>
-                <a href="#bitbucket">Bitbucket</a>
+                <a href="#bitbucket" className="font-normal">Bitbucket</a>
               </li>
             </ul>
           </div>
@@ -88,27 +88,27 @@ const footer = (props) => {
         </div>
         <div className="flex flex-col gap-6">
           <div>
-            <h4>RESOURCES</h4>
+            <h4 className="font-bold text-sm">RESOURCES</h4>
           </div>
           <div>
             <ul className="flex flex-col gap-3">
               <li>
-                <a href="#technical-support">Technical support</a>
+                <a href="#technical-support" className="font-normal">Technical support</a>
               </li>
               <li>
-                <a href="#purchasing-licensing">Purchasing & licensing</a>
+                <a href="#purchasing-licensing" className="font-normal">Purchasing & licensing</a>
               </li>
               <li>
-                <a href="#atlassian-community">Atlassian Community</a>
+                <a href="#atlassian-community" className="font-normal">Atlassian Community</a>
               </li>
               <li>
-                <a href="#knowledge-base">Knowledge base</a>
+                <a href="#knowledge-base" className="font-normal">Knowledge base</a>
               </li>
               <li>
-                <a href="#marketplace">Marketplace</a>
+                <a href="#marketplace" className="font-normal">Marketplace</a>
               </li>
               <li>
-                <a href="#my-account">My account</a>
+                <a href="#my-account" className="font-normal">My account</a>
               </li>
             </ul>
           </div>
@@ -120,24 +120,24 @@ const footer = (props) => {
         </div>
         <div className="flex flex-col gap-6">
           <div>
-            <h4>LEARN</h4>
+            <h4 className="font-bold text-sm">LEARN</h4>
           </div>
           <div>
             <ul className="flex flex-col gap-3">
               <li>
-                <a href="#partners">Partners</a>
+                <a href="#partners" className="font-normal">Partners</a>
               </li>
               <li>
-                <a href="#training-certification">Training & certification</a>
+                <a href="#training-certification" className="font-normal">Training & certification</a>
               </li>
               <li>
-                <a href="#documentation">Documentation</a>
+                <a href="#documentation" className="font-normal">Documentation</a>
               </li>
               <li>
-                <a href="#developer-resources">Developer resources</a>
+                <a href="#developer-resources" className="font-normal">Developer resources</a>
               </li>
               <li>
-                <a href="#enterprise-services">Enterprise services</a>
+                <a href="#enterprise-services" className="font-normal">Enterprise services</a>
               </li>
             </ul>
           </div>
@@ -150,7 +150,7 @@ const footer = (props) => {
       </div>
       <div className="flex justify-between px-4">
         <div>
-          <h4>Copyright © 2024 Atlassian</h4>
+          <h4 >Copyright © 2024 Atlassian</h4>
         </div>
         <div className="flex gap-4">
           <h4>Privacy policy</h4>

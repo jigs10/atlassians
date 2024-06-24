@@ -13,6 +13,7 @@
   margin-bottom: 60px;
 }
 
+
 .hm-pt-1 h1 span {
   animation: boldText 5s forwards; /* Apply the animation */
 }
@@ -27,13 +28,22 @@
 }
 
 .get-started-btn {
-  background-color: #007bff;
+  background-color: rgb(19, 83, 175);
   color: white;
-  padding: 8px 30px;
+  padding: 8px 25px;
   border: none;
   border-radius: 50px;
   cursor: pointer;
-  font-size: 1.2rem;
+  font-weight: 500;
+  font-size: 1.25rem;
+}
+
+.vid-div{ 
+  z-index: -1;
+  height: 90vh;
+  width: 75vw;
+  clip-path: polygon(0 59%, 0 59%, 0 59%, 95% 59%, 95% 58%, 95% 59%, 99% 59%, 100% 100%, 85% 100%, 24% 100%, 23% 94%, 0 93%);
+  background-color: #1868db;
 }
 
 .get-started-btn:hover {
@@ -59,6 +69,56 @@
   font-weight: 900;
 }
 
+@media (max-width: 575.98px) { 
+  .hm-pt-1 h1 {
+    font-size: 3rem;
+    line-height: 4rem;
+    margin: 8vh 0;
+  }
+
+  .carousel-btn {
+    display: none !important;
+  }
+
+  .video-carousel {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  .vid-div{
+    display: none;
+  }
+
+  .inner-container{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .hm-pt-2 h1{
+    line-height: 2.5rem !important;
+    font-size: 1.7rem !important;
+  }
+
+  .hm-pt-2 .container{
+    padding-top: 2rem !important;
+  }
+
+  .inner-container .left{
+    gap: 2vw;
+    width: 100%;
+  }
+
+  .inner-container h1{
+    font-size: 1.4rem !important;
+    text-align: start !important;
+  }
+
+  .right{
+    align-items: center !important;
+  }
+}
+
 .carousel-video {
   width: 82%; /* Adjust as necessary to fit your design */
   height: auto;
@@ -71,6 +131,20 @@
   font-weight: 700;
   font-family: var(--bxp-charlie-display-font-family);
   position: relative;
+}
+
+.pt-3-div{
+  z-index: -1;
+  color: white;
+  position: absolute;
+  height: 120vh;
+  width: 80vw;
+  background-color: black;
+  clip-path: polygon(0 0, 100% 0, 100% 50%, 0 60%);
+}
+
+.cv-scroll::-webkit-scrollbar {
+  display: none;
 }
 
 

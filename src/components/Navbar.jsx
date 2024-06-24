@@ -3,7 +3,7 @@ import "../styles/Navbar.css";
 
 const Navbar = (props) => {
   const [hoveredItem, setHoveredItem] = useState(null);
-  const [SearchVisible, setSearchVisible] = useState(null);
+  const [SearchVisible, setSearchVisible] = useState(false);
 
   const handleMouseEnter = (id) => () => {
     setHoveredItem(id);
@@ -13,12 +13,18 @@ const Navbar = (props) => {
     setHoveredItem(null);
   };
 
+
+  // Step 3: Handle button click
+  const handleSearchVisible = () => {
+    setSearchVisible(!SearchVisible);
+  };
+
   return (
-    <nav className="my-[3vh] mx-[12vw] justify-between flex flex-row">
-      <div className="flex flex-row gap-10">
+    <nav className="my-[3vh] mx-[12vw] justify-between items-center flex flex-row ">
+    <div className={`flex flex-row gap-10 ${SearchVisible ? 'w-full' : ''}`}>
         <div>
           <a href="/">
-            {" "}
+           
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width={187}
@@ -38,83 +44,83 @@ const Navbar = (props) => {
             </svg>
           </a>
         </div>
-        <ul className="flex flex-row gap-10">
-      <li>
-        <a
-          onMouseEnter={handleMouseEnter(1)}
-          onMouseLeave={handleMouseLeave}
-          href="/products"
-        >
-          Products{" "}
-          <i
-            className={
-              hoveredItem === 1 ? "ri-arrow-up-s-line" : "ri-arrow-down-s-line"
-            }
-          ></i>
-        </a>
-      </li>
-      <li>
-        <a
-          onMouseEnter={handleMouseEnter(2)}
-          onMouseLeave={handleMouseLeave}
-          href="/teams"
-        >
-          Teams
-          <i
-            className={
-              hoveredItem === 2 ? "ri-arrow-up-s-line" : "ri-arrow-down-s-line"
-            }
-          ></i>
-        </a>
-      </li>
-      <li>
-        <a
-          onMouseEnter={handleMouseEnter(3)}
-          onMouseLeave={handleMouseLeave}
-          href="/why-atlassian"
-        >
-          Why Atlassian
-          <i
-            className={
-              hoveredItem === 3 ? "ri-arrow-up-s-line" : "ri-arrow-down-s-line"
-            }
-          ></i>
-        </a>
-      </li>
-      <li>
-        <a
-          onMouseEnter={handleMouseEnter(4)}
-          onMouseLeave={handleMouseLeave}
-          href="/resources"
-        >
-          Resources
-          <i
-            className={
-              hoveredItem === 4 ? "ri-arrow-up-s-line" : "ri-arrow-down-s-line"
-            }
-          ></i>
-        </a>
-      </li>
-      <li>
-        <a
-          onMouseEnter={handleMouseEnter(5)}
-          onMouseLeave={handleMouseLeave}
-          href="/enterprise"
-        >
-          Enterprise
-          
-        </a>
-      </li>
-    </ul>
+     
+        {!SearchVisible ? (
+  <ul className="flex flex-row gap-10">
+    <li>
+      <a
+        onMouseEnter={handleMouseEnter(1)}
+        onMouseLeave={handleMouseLeave}
+        href="/products"
+      >
+        Products
+        <i className={hoveredItem === 1 ? "ri-arrow-up-s-line" : "ri-arrow-down-s-line"}></i>
+      </a>
+    </li>
+    <li>
+      <a
+        onMouseEnter={handleMouseEnter(2)}
+        onMouseLeave={handleMouseLeave}
+        href="/teams"
+      >
+        Teams
+        <i className={hoveredItem === 2 ? "ri-arrow-up-s-line" : "ri-arrow-down-s-line"}></i>
+      </a>
+    </li>
+    <li>
+      <a
+        onMouseEnter={handleMouseEnter(3)}
+        onMouseLeave={handleMouseLeave}
+        href="/why-atlassian"
+      >
+        Why Atlassian
+        <i className={hoveredItem === 3 ? "ri-arrow-up-s-line" : "ri-arrow-down-s-line"}></i>
+      </a>
+    </li>
+    <li>
+      <a
+        onMouseEnter={handleMouseEnter(4)}
+        onMouseLeave={handleMouseLeave}
+        href="/resources"
+      >
+        Resources
+        <i className={hoveredItem === 4 ? "ri-arrow-up-s-line" : "ri-arrow-down-s-line"}></i>
+      </a>
+    </li>
+    <li>
+      <a
+        onMouseEnter={handleMouseEnter(5)}
+        onMouseLeave={handleMouseLeave}
+        href="/enterprise"
+      >
+        Enterprise
+      </a>
+    </li>
+  </ul>
+) : (
+  <div className="w-full flex p-1 bg-gray-100 me-5 rounded-full">
+    <input type="text" placeholder="Search Keywords" className=" px-4 flex-1 border-none outline-none bg-transparent text-gray-900 placeholder-gray-500" />
+</div>
+
+)}
+  
+
+      
+   
       </div>
       <div className="flex flex-row gap-5 items-center nav-pt-2">
-        <button>
-          <i className="ri-search-line text-lg text-gray-400"></i>
+        <button onClick={handleSearchVisible}>
+          <i className={`${!SearchVisible ? "ri-search-line" : "ri-close-line"} text-lg text-gray-400`}></i>
         </button>
+        {!SearchVisible ? ( <>
         <div className="bg-gray-400 w-[1px] h-[24px]"></div>
         <a href="/sign-in" className="text-blue-600 text-[0.8vw]">
           Sign in
         </a>
+        </> ) : ""}
+      </div>
+      <div className="menu hidden">
+      <i className="ri-menu-line text-white text-[2rem]"></i>
       </div>
     </nav>
   );

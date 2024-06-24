@@ -2,15 +2,15 @@ import React from "react";
 
 const CardVid = (props) => {
   return (
-    <div className="container py-[10vh] ">
+    <div className="container py-[15vh] ">
       <div className="inner-container flex gap-3">
      
       
      
-        <div className="left flex flex-col gap-3 w-[70%] overflow-y-scroll h-[70vh]">
-        {Array(4).fill().map((_, index) => (
+        <div className="left flex flex-col gap-3 w-[70%] cv-scroll overflow-y-scroll">
+        {/* {Array(4).fill().map((_, index) => ( */}
           <>
-          <div className="flex gap-2" key={index}>
+          <div className="flex gap-2" >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width={32}
@@ -27,9 +27,9 @@ const CardVid = (props) => {
 
             <h4 className="text-lg font-medium">Jira</h4>
           </div>
-          <p className="flex text-[2rem] font-bold">
+          <h1 className="flex text-[2rem] font-bold">
             Dream it, plan it, launch it
-          </p>
+          </h1>
           <p className="flex w-[90%] text-justify text-[1.2rem]">
             {" "}
             The #1 tool for agile teams is now for all teams. Plan, track, and
@@ -53,7 +53,7 @@ const CardVid = (props) => {
         <button className="text-blue-600">Learn more <i class="ri-arrow-right-line"></i></button>
       </div>
       </>
-        ))}
+        {/* ))} */}
         </div>
        
         <div className="right flex flex-col align-middle justify-center">
@@ -69,7 +69,7 @@ const CardVid = (props) => {
             />
             Your browser does not support the video tag.
           </video>
-          <div className="flex justify-end mt-10"><button className="bg-blue-600 px-6 py-2 rounded-full font-medium text-[1.2rem]">Get started with Jira</button></div>
+          <div className="flex justify-end mt-10"><button className="bg-blue-600 text-white px-6 py-2 rounded-full font-medium text-[1.2rem]">Get started with Jira</button></div>
          
         </div>
       </div>
