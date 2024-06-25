@@ -13,21 +13,21 @@ const NavCard = () => {
           <li><a className="px-8 py-2 text-[1.2rem] border-2 rounded-full" href="">IT</a></li>
         </ul>
       </div>
-      <div className="flex justify-between">
+      <div className="flex justify-between spe-div">
         <div className="text-start flex flex-col gap-6">
           <h4 className="text-[2rem] font-bold leading-tight">Supercharge dev productivity</h4>
           <p className="w-[93%]">
             Plan, track, and release world-class software with the number one
             software development tool for agile teams
           </p>
-          <a className="text-blue-600 flex items-center" href="">Learn more about Software <i class="ri-arrow-right-line"></i></a>
+          <a className="text-blue-600 flex items-center" href="">Learn more about Software <i className="ri-arrow-right-line"></i></a>
         </div>
         <div>
           <img src="https://wac-cdn.atlassian.com/misc-assets/webp-images/software-main.webp" alt="" />
         </div>
       </div>
       <p className="my-8">GET STARTED WITH A TEMPLATE</p>
-      <div className="flex text-start gap-8">
+      <div className="flex text-start gap-8 spe-div">
         <div>
           <div className="mb-5"> 
             <img src="https://wac-cdn.atlassian.com/misc-assets/webp-images/software-card-1.webp" alt="" />
@@ -37,7 +37,7 @@ const NavCard = () => {
             <p className="w-[93%]">
             Easily plan, track, and manage work across sprints
             </p>
-            <a className="text-blue-600" href="">Try it out <i class="ri-arrow-right-line"></i></a>
+            <a className="text-blue-600" href="">Try it out <i className="ri-arrow-right-line"></i></a>
           </div>
         </div>
         <div>
@@ -49,7 +49,7 @@ const NavCard = () => {
             <p className="w-[93%]">
             Seamlessly report, track, and prioritize bugs to address development issues
             </p>
-            <a className="text-blue-600" href="">Try it out <i class="ri-arrow-right-line"></i></a>
+            <a className="text-blue-600" href="">Try it out <i className="ri-arrow-right-line"></i></a>
           </div>
         </div>
         <div>
@@ -61,7 +61,7 @@ const NavCard = () => {
             <p className="w-[93%]">
             Develop, deploy, and manage applications with an open tools approach
             </p>
-            <a className="text-blue-600" href="">Try it out <i class="ri-arrow-right-line"></i></a>
+            <a className="text-blue-600" href="">Try it out <i className="ri-arrow-right-line"></i></a>
           </div>
         </div>
       </div>

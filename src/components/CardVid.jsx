@@ -50,7 +50,7 @@ const CardVid = (props) => {
             </div>
           </div>
           <div className="flex items-start mt-8">
-        <button className="text-blue-600">Learn more <i class="ri-arrow-right-line"></i></button>
+        <button className="text-blue-600">Learn more <i className="ri-arrow-right-line"></i></button>
       </div>
       </>
         {/* ))} */}

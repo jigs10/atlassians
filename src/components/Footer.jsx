@@ -2,8 +2,8 @@ import React from "react";
 
 const footer = (props) => {
   return (
-    <div className="mb-[5vh] mx-[10vw] hidden">
-      <div className="px-[2vw] mb-[5vh]  py-[5vh] bg-gray-200 rounded-2xl flex justify-between">
+    <footer className="mb-[5vh] mx-[10vw]">
+      <div className="footer-1 px-[2vw] mb-[5vh]  py-[5vh] bg-gray-200 rounded-2xl flex justify-between">
   
         <div className="flex flex-col gap-6">
           <div>
@@ -25,7 +25,7 @@ const footer = (props) => {
             </svg>
           </div>
           <div>
-            <ul className="flex flex-col gap-3">
+            <ul className="flex flex-col gap-3 mar-bot">
               <li>
                 <a href="#company">Company</a>
               </li>
@@ -50,7 +50,7 @@ const footer = (props) => {
             </ul>
           </div>
         </div>
-        <div className="flex flex-col gap-6">
+        <div className="flex flex-col gap-6 mar-bot">
           <div>
           
             <h4 className="font-bold text-sm">PRODUCTS</h4>
@@ -82,11 +82,11 @@ const footer = (props) => {
           </div>
           <div>
             <a href="">
-              See all products <i class="ri-arrow-right-line"></i>
+              See all products <i className="ri-arrow-right-line"></i>
             </a>
           </div>
         </div>
-        <div className="flex flex-col gap-6">
+        <div className="flex flex-col gap-6 mar-bot">
           <div>
             <h4 className="font-bold text-sm">RESOURCES</h4>
           </div>
@@ -114,7 +114,7 @@ const footer = (props) => {
           </div>
           <div>
             <a href="">
-              Create support ticket <i class="ri-arrow-right-line"></i>
+              Create support ticket <i className="ri-arrow-right-line"></i>
             </a>
           </div>
         </div>
@@ -143,23 +143,23 @@ const footer = (props) => {
           </div>
           <div>
             <a href="">
-              See all resources <i class="ri-arrow-right-line"></i>
+              See all resources <i className="ri-arrow-right-line"></i>
             </a>
           </div>
         </div>
       </div>
-      <div className="flex justify-between px-4">
+      <div className="footer-2 flex justify-between px-4">
         <div>
           <h4 >Copyright © 2024 Atlassian</h4>
         </div>
-        <div className="flex gap-4">
+        <div className="f-div flex gap-4">
           <h4>Privacy policy</h4>
           <h4>Terms</h4>
           <h4>Impressum</h4>
           <h4>English</h4>
         </div>
       </div>
-    </div>
+    </footer>
   );
 };
 

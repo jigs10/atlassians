@@ -3,7 +3,7 @@ import React from "react";
 const BtmNavCard = () => {
   return (
     <div className=" flex flex-col px-[9vw] justify-center">
-      <div className="flex gap-[5rem] pb-[5vh] justify-center">
+      <div className="flex gap-[5rem] pb-[5vh] justify-center inner-div">
         <div className="flex items-center">
           <img 
             src="https://wac-cdn.atlassian.com/misc-assets/webp-images/MercedesBenz-357676847.webp"
@@ -11,7 +11,7 @@ const BtmNavCard = () => {
             className="w-[150%]"
           />
         </div>
-        <div className="flex flex-col text-start gap-4 justify-center text-white relative">
+        <div className="in-inner-div flex flex-col text-start gap-4 justify-center text-white relative">
           <p>LARGE ENTERPRISE</p>
           <p className="text-[1.5rem]">
             “With Atlassian cloud, everything regarding server maintenance is

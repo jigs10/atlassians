@@ -20,7 +20,7 @@ const Navbar = (props) => {
   };
 
   return (
-    <nav className="my-[3vh] mx-[12vw] justify-between items-center flex flex-row ">
+    <nav className="my-[3vh] mx-[12vw] justify-between items-center flex flex-row "> 
     <div className={`flex flex-row gap-10 ${SearchVisible ? 'w-full' : ''}`}>
         <div>
           <a href="/">
@@ -105,8 +105,6 @@ const Navbar = (props) => {
 )}
   
 
-      
-   
       </div>
       <div className="flex flex-row gap-5 items-center nav-pt-2">
         <button onClick={handleSearchVisible}>
@@ -120,7 +118,7 @@ const Navbar = (props) => {
         </> ) : ""}
       </div>
       <div className="menu hidden">
-      <i className="ri-menu-line text-white text-[2rem]"></i>
+      <i className="ri-menu-line text-black text-[2rem]"></i>
       </div>
     </nav>
   );
