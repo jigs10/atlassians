@@ -1,3 +1,13 @@
+nav{
+    position: fixed;
+    top: 0; 
+    right: 0;
+    left: 0;
+    background-color: white;
+    padding: 2vh 15vw;
+    z-index: 10;
+}
+
 ul li {
     display: flex;
     align-items: center;

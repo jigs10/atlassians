@@ -57,30 +57,53 @@ const Home = (props) => {
   }, []);
 
   const sectionRef = useRef(null);
+  const anothernRef = useRef(null);
 
   useEffect(() => {
-    const element = sectionRef.current;
+    const sectionElement = sectionRef.current;
+    const anotherElement = anothernRef.current;
 
-    ScrollTrigger.create({
-      trigger: element,
-      start: "top 80%",
+    const sectionTrigger = sectionElement && ScrollTrigger.create({
+      trigger: sectionElement,
       onEnter: () => {
-        element.classList.add("animate");
+        sectionElement.classList.add("animate");
       },
       onLeave: () => {
-        element.classList.remove("animate");
+        sectionElement.classList.remove("animate");
       },
       onEnterBack: () => {
-        element.classList.add("animate");
+        sectionElement.classList.add("animate");
       },
     });
+
+    const anotherTrigger = anotherElement && ScrollTrigger.create({
+      trigger: anotherElement,
+      onEnter: () => {
+        anotherElement.classList.add("animate");
+      },
+      onLeave: () => {
+        anotherElement.classList.remove("animate");
+      },
+      onLeaveBack: () => {
+        anotherElement.classList.remove("animate");
+      },
+      onEnterBack: () => {
+        anotherElement.classList.add("animate");
+      },
+    });
+
+    // Cleanup function to remove the ScrollTrigger instances on unmount
+    return () => {
+      sectionTrigger && sectionTrigger.kill();
+      anotherTrigger && anotherTrigger.kill();
+    };
   }, []);
 
   return (
     <>
       <Navbar />
       <div className="home-container px-[2vw]">
-        <div className="hm-pt-1 px-[10vw] mb-[15vh]" ref={sectionRef}>
+        <div className="hm-pt-1 mt-[15vh] px-[10vw] mb-[15vh]" ref={sectionRef}>
           <h1>
             The new Jira: <br />
             from{" "}
@@ -270,29 +293,47 @@ const Home = (props) => {
             </div>
           </div>
         </div>
-        <div className="hm-pt-7  flex flex-col gap-[20vh] mb-[5vh] mt-[20vh] px-[4vw]">
-          {/* <div className="flex item"> <div className="pt-7-imgs-1">
-            <img className="img1" src="https://wac-cdn.atlassian.com/misc-assets/webp-images/big-star.svg" width={60} alt="" />
-            <img className="img2" src="https://wac-cdn.atlassian.com/misc-assets/webp-images/sm-star.svg" width={30} alt="" />
-          </div> */}
-          <div className="pt-7-1 flex flex-col items-center justify-center gap-5">
-            <h1 className="text-[3rem] w-[42%] leading-tight">
-              Help us shape{" "}
-              <span className="font-bold">the future of teamwork</span>
-            </h1>
-            <p className="w-[30%]">
-              At Atlassian, we believe the impossible is possible - together.
-              Join us today to help us inspire teamwork anywhere and everywhere,
-              worldwide.
-            </p>
-            <button className="bg-transparent px-6 py-2 text-[1.3rem] border-2 border-gray-600 rounded-full font-medium">
-              Share your story
-            </button>
+        <div className="hm-pt-7 flex flex-col gap-[20vh] mb-[5vh] pt-[20vh] px-[4vw] relative" >
+          <div className="flex item justify-center " ref={anothernRef}>
+            {" "}
+            <div className="pt-7-imgs-1">
+              <img
+                className="img1"
+                src="https://wac-cdn.atlassian.com/misc-assets/webp-images/big-star.svg"
+                width={90}
+                alt=""
+              />
+              <img
+                className="img2"
+                src="https://wac-cdn.atlassian.com/misc-assets/webp-images/sm-star.svg"
+                width={50}
+                alt=""
+              />
+            </div>
+            <div className="pt-7-1 flex flex-col items-center justify-center gap-5">
+              <h1 className="text-[3rem] leading-tight">
+                Help us shape{" "}
+                <span className="font-bold">the future of teamwork</span>
+              </h1>
+              <p>
+                At Atlassian, we believe the impossible is possible - together.
+                Join us today to help us inspire teamwork anywhere and
+                everywhere, worldwide.
+              </p>
+              <button className="bg-transparent px-6 py-2 text-[1.3rem] border-2 border-gray-600 rounded-full font-medium">
+                Share your story
+              </button>
+            </div>
+            <div className="pt-7-imgs-2">
+              <img
+                className="img3"
+                src="https://wac-cdn.atlassian.com/misc-assets/webp-images/circle-checkmark.svg"
+                width={80}
+                alt=""
+              />
+            </div>
           </div>
-          {/* <div className="pt-7-imgs-2"><img className="img3" src="https://wac-cdn.atlassian.com/misc-assets/webp-images/circle-checkmark.svg" width={70} alt="" /></div> */}
-          
-          {/* </div> */}
-         
+
           <div className="pt-7-2 flex flex-col items-center justify-center gap-5 bg-blue-600 py-[15vh] text-white">
             <h1 className="text-[2rem] font-bold">
               Unleash the power of teamwork

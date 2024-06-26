@@ -75,6 +75,15 @@ const BtmNavCard = () => {
               />
             </button>
           </li>
+          <li className="active:border-t-2 active:border-gray-200">
+            <button className="mt-4 ">
+              <img
+                src="https://wac-cdn.atlassian.com/misc-assets/webp-images/hcs-brand-logo.svg"
+                alt=""
+              />
+            </button>
+          </li>
+         
         </ul>
       </div>
     </div>

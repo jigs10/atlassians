@@ -20,7 +20,7 @@ const Navbar = (props) => {
   };
 
   return (
-    <nav className="my-[3vh] mx-[12vw] justify-between items-center flex flex-row "> 
+    <nav className=" justify-between items-center flex flex-row "> 
     <div className={`flex flex-row gap-10 ${SearchVisible ? 'w-full' : ''}`}>
         <div>
           <a href="/">

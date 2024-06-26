@@ -37,9 +37,7 @@ position: absolute;
   }
 }
 
-.yellow-underline svg{
- 
-}
+
 
 
 
@@ -104,6 +102,11 @@ position: absolute;
   position: absolute;
 }
 
+.hm-pt-6 ul img{
+  width: 10rem;
+ 
+ }
+
 
 @media (max-width: 575.98px) { 
 
@@ -111,10 +114,9 @@ position: absolute;
     display: none;
   }
   .hm-pt-1 h1 {
-        padding-top: 2rem !important;
     font-size: 3rem;
     line-height: 4rem;
-    margin: 8vh 0;
+    margin: 4vh 0;
   }
 
   .carousel-btn {
@@ -252,7 +254,7 @@ position: absolute;
  .pt-6-3 div{
   flex-direction: column;
   align-items: center;
-  padding: 1rem 2rem;
+  padding: 1rem 1rem;
   gap: 0.8rem;
  }
 
@@ -262,6 +264,7 @@ position: absolute;
 
  .hm-pt-7{
   padding: 0 !important;
+  gap: 10vh !important;
  }
 
  .hm-pt-7 h1, .hm-pt-7 p{
@@ -299,7 +302,68 @@ position: absolute;
   flex-direction: column;
  }
 
+ .pt-7-1{
+  flex-direction: column;
+  width: 100% !important;
+ }
+
+ .pt-7-imgs-1 , .pt-7-imgs-2{
+  display: none;
+
+ }
+
 }
+
+.pt-7-1 {
+  width: 42%;
+  padding: 0 2vw;
+}
+
+.pt-7-1 p{
+  width: 70%;
+}
+
+.img1{
+  position: absolute;
+  top:80px;
+  left: 440px;
+  opacity: 0;
+  
+}
+
+.hm-pt-7 div.animate .img1{animation: imgsanime .6s ease-out .3s 1 forwards;}
+
+.img2{
+  position: absolute;
+ top: 180px;
+ left: 420px;
+ opacity: 0;
+
+}
+
+.hm-pt-7 div.animate .img2{ animation: imgsanime .3s ease-out .8s 1 forwards;}
+
+.img3{
+  position: absolute;
+ top: 260px;
+ left: 1040px;
+ opacity: 0;
+
+}
+
+.hm-pt-7 div.animate .img3{ animation: imgsanime .4s ease-out 1.3s 1 forwards;}
+
+@keyframes imgsanime {
+  0% {
+  opacity: 0;
+  }
+  
+  100% {
+   opacity: 1;
+  }
+}
+
+
 
 .carousel-video {
   width: 82%; /* Adjust as necessary to fit your design */
