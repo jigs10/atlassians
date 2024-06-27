@@ -19,6 +19,7 @@ const Home = (props) => {
 
   const videos = [
     "https://wac-cdn.atlassian.com/misc-assets/webp-images/CSD-10721_WAC_Hero_C_LowBR.mp4",
+    "https://wac-cdn.atlassian.com/misc-assets/webp-images/CSD-10721_WAC_Hero_FULL_LowBR.mp4",
   ];
 
   const nextVideo = () => {
