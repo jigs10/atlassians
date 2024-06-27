@@ -1,6 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 
 const BtmNavCard = () => {
+  const [border, setBorder] = useState(null);
+
+  const logos = [
+    "https://wac-cdn.atlassian.com/misc-assets/webp-images/mercedes-benz-brand-logo1.svg",
+    "https://wac-cdn.atlassian.com/misc-assets/webp-images/roblox-brand-logo.svg",
+    "https://wac-cdn.atlassian.com/misc-assets/webp-images/royal-caribbean-brand-logo.svg",
+    "https://wac-cdn.atlassian.com/misc-assets/webp-images/lumen-brand-logo.svg",
+    "https://wac-cdn.atlassian.com/misc-assets/webp-images/doodle-brand-logo.svg",
+    "https://wac-cdn.atlassian.com/misc-assets/webp-images/dropbox-brand-logo.svg",
+    "https://wac-cdn.atlassian.com/misc-assets/webp-images/hcs-brand-logo.svg",
+  ];
   return (
     <div className=" flex flex-col px-[9vw] justify-center">
       <div className="flex gap-[5rem] pb-[5vh] justify-center inner-div">
@@ -26,65 +37,19 @@ const BtmNavCard = () => {
         </div>
       </div>
       <div>
-        <ul className="flex gap-8 border-t border-gray-50">
-          <li className="active:border-t-2 active:border-gray-200">
-            <button className="mt-4">
-              <img
-                src="https://wac-cdn.atlassian.com/misc-assets/webp-images/mercedes-benz-brand-logo1.svg"
-                alt=""
-              />
-            </button>
-          </li>
-          <li className="active:border-t-2 active:border-gray-200">
-            <button className="mt-4">
-              <img
-                src="https://wac-cdn.atlassian.com/misc-assets/webp-images/roblox-brand-logo.svg"
-                alt=""
-              />
-            </button>
-          </li>
-          <li className="active:border-t-2 active:border-gray-200">
-            <button className="mt-4">
-              <img
-                src="https://wac-cdn.atlassian.com/misc-assets/webp-images/royal-caribbean-brand-logo.svg"
-                alt=""
-              />
-            </button>
-          </li>
-          <li className="active:border-t-2 active:border-gray-200">
-            <button className="mt-4">
-              <img
-                src="https://wac-cdn.atlassian.com/misc-assets/webp-images/lumen-brand-logo.svg"
-                alt=""
-              />
-            </button>
-          </li>
-          <li className="active:border-t-2 active:border-gray-200">
-            <button className="mt-4">
-              <img
-                src="https://wac-cdn.atlassian.com/misc-assets/webp-images/doodle-brand-logo.svg"
-                alt=""
-              />
-            </button>
-          </li>
-          <li className="active:border-t-2 active:border-gray-200">
-            <button className="mt-4 ">
-              <img
-                src="https://wac-cdn.atlassian.com/misc-assets/webp-images/dropbox-brand-logo.svg"
-                alt=""
-              />
-            </button>
-          </li>
-          <li className="active:border-t-2 active:border-gray-200">
-            <button className="mt-4 ">
-              <img
-                src="https://wac-cdn.atlassian.com/misc-assets/webp-images/hcs-brand-logo.svg"
-                alt=""
-              />
-            </button>
-          </li>
-         
-        </ul>
+   
+
+    <ul className="flex gap-8 border-t border-gray-50">
+      {logos.map((src, index) => (
+        <li key={index} className="flex flex-col relative">
+          <div className={`absolute -top-[1px] h-[3px] w-full bg-gray-200 ${border === index ? "block" : "hidden"}`}></div>
+          <button className="mt-6" onClick={() => setBorder(index)}>
+            <img src={src} alt={`Logo ${index + 1}`} />
+          </button>
+        </li>
+      ))}
+    </ul>
+
       </div>
     </div>
   );
