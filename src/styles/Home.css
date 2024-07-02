@@ -1,3 +1,7 @@
+*{
+  box-sizing: border-box;
+}
+
 .home-container {
   text-align: center;
   /* padding: 0 12vw; */
@@ -107,8 +111,31 @@ position: absolute;
  
  }
 
+.vidDiv{
+  position: fixed;
+  top: 0;
+  padding:10rem 3rem 3rem 3rem;
+
+ }
+
+.inner-container .left{
+  width: calc(35%-15px) !important;
+ }
+
+.inner-container .right{
+  width: calc(65%-15px) !important;
+ }
+
+
+
 
 @media (max-width: 575.98px) { 
+
+  .vidDiv {
+    position: relative;
+    width: 100% !important;
+    padding: 0 !important;
+  }
 
   .yellow-underline {
     display: none;
@@ -374,7 +401,7 @@ position: absolute;
 .hm-pt-2 h1 {
   text-align: start;
   line-height: 3rem;
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: 700;
   font-family: var(--bxp-charlie-display-font-family);
   position: relative;
