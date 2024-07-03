@@ -117,13 +117,7 @@ position: absolute;
 
  }
 
-.inner-container .left{
-  width: calc(35%-15px) !important;
- }
 
-.inner-container .right{
-  width: calc(65%-15px) !important;
- }
 
 
 
