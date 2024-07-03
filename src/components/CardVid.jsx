@@ -35,7 +35,7 @@ const CardVid = (props) => {
 
     const sectionTrigger = sectionElement && ScrollTrigger.create({
       start: "top 140vh",
-      end: "bottom 400vh",
+      end: "bottom 600vh",
     
       trigger: sectionElement,
     
@@ -67,15 +67,11 @@ const CardVid = (props) => {
 
   return (
     <div className="container py-[15vh]">
-      <div className={`inner-container flex gap-3 relative cv-scroll ${Lastelm && "items-end" }`}>
-     
-      
-     
-        <div className={`left flex flex-col gap-3 ${fixedVid? "w-[35%]" : "w-[70%]"} cv-scroll`} ref={sectionRef}>
+  <div className={`inner-container grid gap-3 relative cv-scroll ${Lastelm && "items-end"}`} style={{ gridTemplateColumns: fixedVid ? '35% 65%' : '35% 65%' }}>
     
-        {Array(5).fill().map((_, index) => (
-          
-          <div key={index} ref={index >= Array.length ? lastElementRef : null}>
+    <div className={`left flex flex-col gap-3 cv-scroll`} ref={sectionRef}>
+      {Array(5).fill().map((_, index) => (
+        <div key={index} ref={index >= Array.length ? lastElementRef : null}>
           <div className="flex gap-2">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -97,9 +93,7 @@ const CardVid = (props) => {
             Dream it, plan it, launch it
           </h1>
           <p className="flex w-[90%] text-justify text-[1rem]">
-            {" "}
-            The #1 tool for agile teams is now for all teams. Plan, track, and
-            deliver your biggest ideas together.
+            The #1 tool for agile teams is now for all teams. Plan, track, and deliver your biggest ideas together.
           </p>
           <div className="bg-gray-50 p-[1vw] flex flex-row gap-3 mt-6">
             <div className="flex flex-col">
@@ -107,43 +101,43 @@ const CardVid = (props) => {
             </div>
             <div className="w-[70%] text-start">
               <p className="mb-2 text-[1rem]">
-                “We've been able to reduce our cycle time and increase
-                throughput by 200%, which means we're delivering capabilities to
-                customers faster and increasing customer satisfaction.”
+                “We've been able to reduce our cycle time and increase throughput by 200%, which means we're delivering capabilities to customers faster and increasing customer satisfaction.”
               </p>
               <h4 className="font-medium">Mai Lian Scarlett</h4>
               <p className="text-[0.8rem]">FORMER SENIOR DIRECTOR, AGILE TRANSFORMATION OFFICE, LUMEN</p>
             </div>
           </div>
           <div className="flex items-start mt-8">
-        <button className="text-blue-600">Learn more <i className="ri-arrow-right-line"></i></button>
-      </div>
-      </div>
-       ))}
-      
+            <button className="text-blue-600">Learn more <i className="ri-arrow-right-line"></i></button>
+          </div>
         </div>
-       
-        <div className="right align-middle relative">
-          <div className={`${fixedVid ? "vidDiv" : "relative" }`}>
-          <video
-            muted
-            autoPlay
-            loop
-            className={`${fixedVid? "w-[84%]" : "w-[100%]"} border-gray-200 rounded-lg border-2`}
-          >
-            <source
-              src="https://wac-cdn.atlassian.com/misc-assets/webp-images/CSD-10721_WAC_Hero_C_LowBR.mp4"
-              type="video/mp4"
-            />
-            Your browser does not support the video tag.
-          </video>
-          <div className="flex mt-10"><button className="bg-blue-600 text-white px-6 py-2 rounded-full font-medium text-[1.2rem]">Get started with Jira</button></div>
-         
-        </div>
-        </div>
-      </div>
-      
+      ))}
     </div>
+
+    <div className="right align-middle relative">
+      <div className={`${fixedVid ? "vidDiv" : "relative"}  px-[3rem]`}>
+        <video
+          muted
+          autoPlay
+          loop
+          className={`${fixedVid ? "w-[80%]" : "w-[100%]"} border-gray-200 rounded-lg border-2`}
+        >
+          <source
+            src="https://wac-cdn.atlassian.com/misc-assets/webp-images/CSD-10721_WAC_Hero_C_LowBR.mp4"
+            type="video/mp4"
+          />
+          Your browser does not support the video tag.
+        </video>
+        <div className="flex mt-10">
+          <button className="bg-blue-600 text-white px-6 py-2 rounded-full font-medium text-[1.2rem]">Get started with Jira</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  
   );
 };
 
