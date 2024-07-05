@@ -34,8 +34,8 @@ const CardVid = (props) => {
 
 
     const sectionTrigger = sectionElement && ScrollTrigger.create({
-      start: "top 140vh",
-      end: "bottom 600vh",
+      start: "top 140px",
+      end: "bottom 600px",
     
       trigger: sectionElement,
     
@@ -67,7 +67,7 @@ const CardVid = (props) => {
 
   return (
     <div className="container py-[15vh]">
-  <div className={`inner-container grid gap-3 relative cv-scroll ${Lastelm && "items-end"}`} style={{ gridTemplateColumns: fixedVid ? '35% 65%' : '35% 65%' }}>
+  <div className={`inner-container grid gap-3 relative cv-scroll ${Lastelm && "items-end"}`} style={{ gridTemplateColumns:  '35% 65%'  }}>
     
     <div className={`left flex flex-col gap-3 cv-scroll`} ref={sectionRef}>
       {Array(5).fill().map((_, index) => (
@@ -115,12 +115,12 @@ const CardVid = (props) => {
     </div>
 
     <div className="right align-middle relative">
-      <div className={`${fixedVid ? "vidDiv" : "relative"}  px-[3rem]`}>
+      <div className={`${fixedVid ? "vidDiv" : "relative"} w-[48rem] px-[3rem]`}>
         <video
           muted
           autoPlay
           loop
-          className={`${fixedVid ? "w-[80%]" : "w-[100%]"} border-gray-200 rounded-lg border-2`}
+          className={` border-gray-200 rounded-lg border-2`}
         >
           <source
             src="https://wac-cdn.atlassian.com/misc-assets/webp-images/CSD-10721_WAC_Hero_C_LowBR.mp4"

@@ -17,15 +17,24 @@
   margin-bottom: 60px;
 }
 
+.hm-pt-1 .yellow-underline{
+  position: absolute;
+   
+   -webkit-clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+   clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+   
+  
+ 
+  }
 
 
 .hm-pt-1.animate .yellow-underline{
 position: absolute;
- /* Apply initial clip-path */
+ 
  -webkit-clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
  clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
  
- /* Add animation */
+
  animation: clipPathAnimation 1s ease-in-out forwards;
 }
 
@@ -42,12 +51,15 @@ position: absolute;
 }
 
 
-
+.hm-pt-1 h1 span {
+  display: inline-block;
+ 
+}
 
 
 .hm-pt-1.animate h1 span {
   display: inline-block;
-  animation: boldText 1s forwards;  /* Apply the animation when .animate class is added */
+  animation: boldText 1s forwards;  
 }
 
 

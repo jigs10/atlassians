@@ -75,6 +75,7 @@ const Home = (props) => {
       onEnterBack: () => {
         sectionElement.classList.add("animate");
       },
+      // markers:true,
     });
 
     const anotherTrigger = anotherElement && ScrollTrigger.create({
@@ -104,11 +105,11 @@ const Home = (props) => {
     <>
       <Navbar />
       <div className="home-container px-[2vw]">
-        <div className="hm-pt-1 mt-[15vh] px-[10vw] mb-[15vh]" ref={sectionRef}>
+        <div className="hm-pt-1  mt-[15vh] px-[10vw] mb-[15vh]" ref={sectionRef}>
           <h1>
             The new Jira: <br />
             from{" "}
-            <span>
+            <span className="relative">
               teams{" "}
               <div className="yellow-underline">
                 <svg
