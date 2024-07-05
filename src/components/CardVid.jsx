@@ -69,7 +69,7 @@ const CardVid = (props) => {
     <div className="container py-[15vh]">
   <div className={`inner-container grid gap-3 relative cv-scroll ${Lastelm && "items-end"}`} style={{ gridTemplateColumns:  '35% 65%'  }}>
     
-    <div className={`left flex flex-col gap-3 cv-scroll`} ref={sectionRef}>
+    <div className={`left flex flex-col gap-3 cv-scroll pt-[5vh]`} ref={sectionRef}>
       {Array(5).fill().map((_, index) => (
         <div key={index} ref={index >= Array.length ? lastElementRef : null}>
           <div className="flex gap-2">
