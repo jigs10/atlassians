@@ -1,70 +1,78 @@
-# Getting Started with Create React App
+# Atlassian Clone Site
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is a clone of Atlassian's interface, built for practicing animations and React.js development.
+
+## Features
+
+- Smooth animations with CSS and JavaScript
+- Responsive layout
+- Modular React components
+- State management and routing
+
+## Getting Started
+
+To run this project locally, follow these steps:
+
+### 1. Clone the Repository
+
+git clone [atlassians-colne](https://github.com/jigs10/atlassians)\
+
+### 2. Navigate into the Project Directory
+
+cd atlassian-clone
+
+### 3. Install Dependencies
+
+npm install
+
+or
+
+yarn
+
+### 4. Run the Development Server
+
+npm run dev
+
+or
+
+yarn dev
+
+The app should now be running at:
+
+http://localhost:3000
 
 ## Available Scripts
 
 In the project directory, you can run:
 
-### `npm start`
+### npm run dev or yarn dev
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Launches the app in development mode. Open http://localhost:3000 to view it in the browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### npm run build or yarn build
 
-### `npm test`
+Builds the app for production to the dist or build folder.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### npm run start or yarn start
 
-### `npm run build`
+Runs the compiled production build.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### npm run lint or yarn lint
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Runs ESLint to analyze the code for potential issues and enforce style rules.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Technologies Used
 
-### `npm run eject`
+- React.js
+- Tailwind CSS
+- Framer Motion
+- React Router
+- TypeScript (if used)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Notes
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+This project is for learning and practice purposes only. It is not affiliated with Atlassian.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## License
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project is open-source and free to use for educational purposes.
